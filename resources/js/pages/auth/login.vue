@@ -1,7 +1,6 @@
 <template>
     <div>
-        gdfgdf
-        <!-- <form class="card card-md" @submit.prevent="userLogin" autocomplete="off">
+        <form class="card card-md" @submit.prevent="userLogin" autocomplete="off">
             <div class="card-body">
                 <h2 class="card-title text-center mb-4">Login to your account</h2>
                 <div class="mb-3">
@@ -51,7 +50,7 @@
         </form>
         <div class="text-center text-muted mt-3">
             Don't have account yet? <router-link :to="{ name: 'register' }"> Sign up </router-link>
-        </div> -->
+        </div>
     </div>
 </template>
 
@@ -61,11 +60,11 @@
 export default {
     data(){
         return {
-            // loginUserForm : new Form({
-            //     email: '',
-            //     password: '',
-            //     remember_me: '',
-            // }),
+            loginUserForm : new Form({
+                email: '',
+                password: '',
+                remember_me: '',
+            }),
             visibility: false
         }
     },

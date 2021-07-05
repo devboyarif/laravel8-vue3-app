@@ -12,6 +12,13 @@ app.use(router)
 import store from './store/index.js'
 app.use(store)
 
+// vform
+// import './plugins/vform.js';
+import { Form, HasError, AlertError } from 'vform'
+window.Form = Form;
+// app.component(HasError.name, HasError)
+// app.component(AlertError.name, AlertError)
+
 // component setup
 app.component('app', require('./App.vue').default);
 

@@ -27,7 +27,7 @@ const routes = [
     {
         path: '/auth',
         component: AuthLayout,
-        // meta: { requiresVisitor: true },
+        meta: { requiresVisitor: true },
         children: [
             {
                 path: 'login',
@@ -53,16 +53,16 @@ const routes = [
 //     name: 'login',
 //     component: () => import('../pages/auth/login.vue')
 //   },
-//   {
-//     path: '/home',
-//     name: 'About',
-//     component: () => import('../pages/Home.vue')
-//   },
-//   {
-//     path: '/about',
-//     name: 'About',
-//     component: () => import('../pages/About.vue')
-//   }
+  {
+    path: '/home',
+    name: 'About',
+    component: () => import('../pages/Home.vue')
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: () => import('../pages/About.vue')
+  }
 ]
 
 const router = createRouter({
