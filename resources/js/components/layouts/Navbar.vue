@@ -4,50 +4,25 @@
           <div class="navbar navbar-light">
             <div class="container-xl">
               <ul class="navbar-nav">
-                  <navigation-link routeName="home">Home</navigation-link >
-                  <navigation-link routeName="about">About</navigation-link >
-                <!-- <li class="nav-item">
-                  <router-link :to="{name:'home'}" class="nav-link" href="./index.html" >
-                    <span class="nav-link-icon d-md-none d-lg-inline-block">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="5 12 3 12 12 3 21 12 19 12" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
-                    </span>
-                    <span class="nav-link-title">
-                      Home
-                    </span>
-                  </router-link>
-                </li>
-                <li class="nav-item">
-                  <router-link :to="{name:'about'}" class="nav-link" href="./index.html" >
-                    <span class="nav-link-icon d-md-none d-lg-inline-block">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="5 12 3 12 12 3 21 12 19 12" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
-                    </span>
-                    <span class="nav-link-title">
-                      About
-                    </span>
-                  </router-link>
-                </li> -->
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown" role="button" aria-expanded="false" >
-                    <span class="nav-link-icon d-md-none d-lg-inline-block">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" /></svg>
-                    </span>
-                    <span class="nav-link-title">
-                      Extra
-                    </span>
-                  </a>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="./activity.html" >
-                      Activity
-                    </a>
-                  </div>
-                </li>
+                    <navigation-link routeName="home" svgType="home">Home</navigation-link >
+                    <navigation-link routeName="about" svgType="about">About</navigation-link >
+                    <dropdown title="Dropdown">
+                        <template v-slot:icon>
+                           <svg-icons type="cube"/>
+                        </template>
+                        <router-link :to="{ name: 'home' }" class="dropdown-item">
+                            Home
+                        </router-link>
+                        <router-link :to="{ name: 'about' }" class="dropdown-item">
+                            About
+                        </router-link>
+                    </dropdown>
               </ul>
               <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">
                 <form action="." method="get">
                   <div class="input-icon">
                     <span class="input-icon-addon">
-                      <!-- Download SVG icon from http://tabler-icons.io/i/search -->
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="10" cy="10" r="7" /><line x1="21" y1="21" x2="15" y2="15" /></svg>
+                    <svg-icons type="search"/>
                     </span>
                     <input type="text" class="form-control" placeholder="Search…" aria-label="Search in website">
                   </div>
@@ -61,11 +36,14 @@
 
 <script>
 import NavigationLink from '../Navigation/NavigationLink.vue'
+import Dropdown from '../Navigation/Dropdown.vue';
+import SvgIcons from '../SvgIcons.vue'
 
 export default {
     components: {
-        NavigationLink
+        NavigationLink,
+        Dropdown,
+        SvgIcons
     },
-
 }
 </script>
