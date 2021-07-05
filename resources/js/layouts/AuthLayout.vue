@@ -24,8 +24,5 @@ export default {
 
 <style lang="scss">
     @import url('../assets/css/tabler.min.css');
-    // @import url('../assets/css/tabler-flags.min.css');
-    // @import url('../assets/css/tabler-payments.min.css');
     @import url('../assets/css/tabler-vendors.min.css');
-    // @import url('../assets/css/demo.min.css');
 </style>
