@@ -1,10 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Login from '../pages/auth/login'
-import Register from '../pages/auth/register'
+//pages
+import Home from '../pages/Home'
 
 // auth layout
 import AuthLayout from '../layouts/AuthLayout.vue'
+import Login from '../pages/auth/login'
+import Register from '../pages/auth/register'
 
 const routes = [
     {
@@ -17,7 +19,7 @@ const routes = [
             {
                 path: '/',
                 name: 'home',
-                component: () => import('../pages/Home.vue'),
+                component: Home,
                 meta: {
                     title: 'Home'
                 }
