@@ -1,6 +1,7 @@
 <template>
     <div>
-        <form class="card card-md" @submit.prevent="userRegistration" autocomplete="off">
+        ddfg
+        <!-- <form class="card card-md" @submit.prevent="userRegistration" autocomplete="off">
             <div class="card-body">
                 <h2 class="card-title text-center mb-4"> Create new account </h2>
                 <div class="mb-3">
@@ -52,50 +53,50 @@
         </form>
         <div class="text-center text-muted mt-3">
             Already have account? <router-link :to="{ name: 'login' }"> Login </router-link>
-        </div>
+        </div> -->
     </div>
 </template>
 
 <script>
-import Vue from 'vue'
-import { Form, HasError, AlertError } from 'vform'
+// import Vue from 'vue'
+// import { Form, HasError, AlertError } from 'vform'
 
-Vue.component(HasError.name, HasError)
-Vue.component(AlertError.name, AlertError)
+// Vue.component(HasError.name, HasError)
+// Vue.component(AlertError.name, AlertError)
 
 export default {
-    data(){
-        return {
-            registerUserForm : new Form({
-                name: '',
-                email: '',
-                password: '',
-                password_confirmation: '',
-            }),
-            visibility: false
-        }
-    },
-    methods: {
-        userRegistration(){
-            this.registerUserForm.password_confirmation = this.registerUserForm.password;
-            // Submit the form via a POST request
-            axios.get('/sanctum/csrf-cookie').then(response => {
-                // Register...
-                this.registerUserForm.post('/register').then(({ data }) => {
-                    // Login using this account.
-                    this.$router.push({ name: 'home' });
-                    // axios.post('/login', {
-                    //     email: this.registerUserForm.email,
-                    //     password: this.registerUserForm.password,
-                    // }).then(response => {
-                    // });
-                });
-            });
-        }
-    },
-    mounted(){
+    // data(){
+    //     return {
+    //         registerUserForm : new Form({
+    //             name: '',
+    //             email: '',
+    //             password: '',
+    //             password_confirmation: '',
+    //         }),
+    //         visibility: false
+    //     }
+    // },
+    // methods: {
+    //     userRegistration(){
+    //         this.registerUserForm.password_confirmation = this.registerUserForm.password;
+    //         // Submit the form via a POST request
+    //         axios.get('/sanctum/csrf-cookie').then(response => {
+    //             // Register...
+    //             this.registerUserForm.post('/register').then(({ data }) => {
+    //                 // Login using this account.
+    //                 this.$router.push({ name: 'home' });
+    //                 // axios.post('/login', {
+    //                 //     email: this.registerUserForm.email,
+    //                 //     password: this.registerUserForm.password,
+    //                 // }).then(response => {
+    //                 // });
+    //             });
+    //         });
+    //     }
+    // },
+    // mounted(){
 
-    },
+    // },
 }
 </script>
 

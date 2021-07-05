@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Login from '../pages/auth/Login'
-import Register from '../pages/auth/Register'
+import Login from '../pages/auth/login'
+import Register from '../pages/auth/register'
 
 // auth layout
 import AuthLayout from '../layouts/AuthLayout.vue'
@@ -48,21 +48,21 @@ const routes = [
         ]
     },
 
-  {
-    path: '/auth/login',
-    name: 'login',
-    component: () => import('../pages/auth/login.vue')
-  },
-  {
-    path: '/home',
-    name: 'About',
-    component: () => import('../pages/Home.vue')
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: () => import('../pages/About.vue')
-  }
+//   {
+//     path: '/auth/login',
+//     name: 'login',
+//     component: () => import('../pages/auth/login.vue')
+//   },
+//   {
+//     path: '/home',
+//     name: 'About',
+//     component: () => import('../pages/Home.vue')
+//   },
+//   {
+//     path: '/about',
+//     name: 'About',
+//     component: () => import('../pages/About.vue')
+//   }
 ]
 
 const router = createRouter({
