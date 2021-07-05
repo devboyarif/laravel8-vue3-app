@@ -19043,6 +19043,15 @@ var routes = [{
     meta: {
       title: 'Home'
     }
+  }, {
+    path: '/about',
+    name: 'about',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_pages_About_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../pages/About.vue */ "./resources/js/pages/About.vue"));
+    },
+    meta: {
+      title: 'About'
+    }
   }]
 }, {
   path: '/auth',
@@ -19065,23 +19074,6 @@ var routes = [{
       title: 'Register'
     }
   }]
-}, //   {
-//     path: '/auth/login',
-//     name: 'login',
-//     component: () => import('../pages/auth/login.vue')
-//   },
-{
-  path: '/home',
-  name: 'About',
-  component: function component() {
-    return Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! ../pages/Home.vue */ "./resources/js/pages/Home.vue"));
-  }
-}, {
-  path: '/about',
-  name: 'About',
-  component: function component() {
-    return __webpack_require__.e(/*! import() */ "resources_js_pages_About_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../pages/About.vue */ "./resources/js/pages/About.vue"));
-  }
 }];
 var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_4__.createRouter)({
   history: (0,vue_router__WEBPACK_IMPORTED_MODULE_4__.createWebHistory)(process.env.BASE_URL),

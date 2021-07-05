@@ -24,6 +24,14 @@ const routes = [
                     title: 'Home'
                 }
             },
+            {
+                path: '/about',
+                name: 'about',
+                component: () => import('../pages/About.vue'),
+                meta: {
+                    title: 'About'
+                }
+            },
         ]
     },
     {
@@ -49,22 +57,6 @@ const routes = [
             },
         ]
     },
-
-//   {
-//     path: '/auth/login',
-//     name: 'login',
-//     component: () => import('../pages/auth/login.vue')
-//   },
-  {
-    path: '/home',
-    name: 'About',
-    component: () => import('../pages/Home.vue')
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: () => import('../pages/About.vue')
-  }
 ]
 
 const router = createRouter({
