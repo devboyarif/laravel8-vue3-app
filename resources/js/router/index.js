@@ -1,5 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+import Login from '../pages/auth/Login'
+import Register from '../pages/auth/Register'
+
+// auth layout
+import AuthLayout from '../layouts/AuthLayout.vue'
+
 const routes = [
     {
         path: '/',
@@ -18,7 +24,30 @@ const routes = [
             },
         ]
     },
-    // authentication
+    {
+        path: '/auth',
+        component: AuthLayout,
+        // meta: { requiresVisitor: true },
+        children: [
+            {
+                path: 'login',
+                name: 'login',
+                component: Login,
+                meta: {
+                    title: 'Login'
+                }
+            },
+            {
+                path: 'register',
+                name: 'register',
+                component: Register,
+                meta: {
+                    title: 'Register'
+                }
+            },
+        ]
+    },
+
   {
     path: '/auth/login',
     name: 'login',
