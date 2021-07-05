@@ -10,15 +10,7 @@
 <router-link class="btn btn-primary m-1" to="/auth/login">Login</router-link>
 
 <!-- dynamic route pages  -->
-<router-view></router-view>
+<!-- <router-view></router-view> -->
 </template>
 
-<script>
-export default {
 
-}
-</script>
-
-<style>
-
-</style>

@@ -1,7 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../pages/Home.vue'
 
 const routes = [
+    {
+        path: '/',
+        // component: AdminLayout,
+        component: () => import( '../layouts/AdminLayout.vue'),
+        meta: { requiresAuth: true },
+        children: [
+            // dashboard routes
+            {
+                path: '/',
+                name: 'home',
+                component: () => import('../pages/About.vue'),
+                meta: {
+                    title: 'Home'
+                }
+            },
+        ]
+    },
     // authentication
   {
     path: '/auth/login',
@@ -9,14 +25,14 @@ const routes = [
     component: () => import('../pages/auth/login.vue')
   },
   {
-    path: '/about',
+    path: '/home',
     name: 'About',
-    component: () => import('../pages/About.vue')
+    component: () => import('../pages/Home.vue')
   },
   {
     path: '/about',
     name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../pages/About.vue')
+    component: () => import('../pages/About.vue')
   }
 ]
 
