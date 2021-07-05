@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 
-<body>
+<body class="antialiased theme-dark">
     <div id="app"></div>
     <script src="{{ mix('js/app.js') }}"></script>
 </body>
