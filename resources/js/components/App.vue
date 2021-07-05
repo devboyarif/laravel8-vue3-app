@@ -7,6 +7,7 @@
 <!-- router  -->
 <router-link class="btn btn-primary m-1" to="/">Home</router-link> &nbsp;&nbsp;&nbsp;
 <router-link class="btn btn-primary m-1" to="/about">About</router-link>
+<router-link class="btn btn-primary m-1" to="/auth/login">Login</router-link>
 
 <!-- dynamic route pages  -->
 <router-view></router-view>
